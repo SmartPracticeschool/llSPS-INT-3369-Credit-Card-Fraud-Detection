@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Machine Learning API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+ <div class="login" style="display:inline-block;">
+
+
+	<h1 style="font-family:ALGERIAN;font-size:130%;font-style:Bold">CREDIT CARD FRAUD DETECTION</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('y_predict')}}"method="post">
+        <div style="float:left">
+    	<input type="int" name="Time" placeholder="Time" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V1" placeholder="V1" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V2" placeholder="V2" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V3" placeholder="V3" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V4" placeholder="V4" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V5" placeholder="V5" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V6" placeholder="V6" required="required" />
+        </div> 
+        <div style="float:right">
+        <input type="int" name="V7" placeholder="V7" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V8" placeholder="V8" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V9" placeholder="V9" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V10" placeholder="V10" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V11" placeholder="V11" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V12" placeholder="V12" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V14" placeholder="V14" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V16" placeholder="V16" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V17" placeholder="V17" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V18" placeholder="V18" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V19" placeholder="V19" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V20" placeholder="V20" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V21" placeholder="V21" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="V27" placeholder="V27" required="required" />
+        </div>
+        <div style="float:right">
+        <input type="int" name="V28" placeholder="V28" required="required" />
+        </div>
+        <div style="float:left">
+        <input type="int" name="Amount" placeholder="Amount" required="required" />
+        </div>
+        <button type="Submit" class="btn btn-primary btn-block btn-large">Predict</button>
+   
+    </form>
+
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
